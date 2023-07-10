@@ -1,0 +1,40 @@
+.header{
+   padding: 20px 0;
+   &__row{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      
+   }
+   &__logo{
+      max-width: 150px;
+      
+
+   }
+   &__nav{
+
+   }
+   &__list{
+      display: flex;
+      gap:30px;
+      li{       
+         &:last-child{
+            a{
+               color: $pink ;
+            }           
+         }
+      }   
+   }
+   &__link{
+      color: $blueD;
+     
+      transition: color ease-in-out 0.4s;
+      &:hover{
+         color: $pink;
+      }
+     
+   }
+   
+
+}
