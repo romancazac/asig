@@ -1,0 +1,41 @@
+.spoller {
+   &__btn{
+      width: 100%;
+      text-align: left;
+      position: relative;
+      font-weight: 700;
+      padding:5px 0;
+      
+      &::after{
+         content: '';
+         position: absolute;
+         top: 50%;
+         transform: translate(0, -50%) rotate(90deg);
+         right: 0;
+         width: 15px;
+         height: 15px;
+         background-image: url('../../assets/img/cards/arr-spoller.svg');
+         background-position: center;
+         background-repeat: no-repeat;
+         transition: all 0.4s;
+
+      }
+      &._active{
+         &::after{
+           transform: translate(0, -50%) rotate(-90deg); 
+         }
+         
+      }
+       
+     
+   }
+   &__body{
+      padding: 10px 0;
+      border-bottom: 1px solid $blueL;
+   }
+   &__content{
+      padding: 20px 0;
+      line-height: 24px;
+   }
+  
+}

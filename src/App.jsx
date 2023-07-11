@@ -1,20 +1,13 @@
-import { Header } from "./components/Header"
-import { MainSection } from "./components/MainSection"
-import {CardsSection} from "./components/CardsSection"
+import { createRoot } from "react-dom/client";
+import {RouterProvider} from "react-router-dom";
+import { router } from "./routes";
 
 
 function App() {
 
 
   return (
-    <div className="wrapper">
-      <Header />
-      <main className="main">
-        <MainSection />
-        <CardsSection/>
-      </main>
-
-    </div>
+    <RouterProvider router={router} />
   )
 }
 

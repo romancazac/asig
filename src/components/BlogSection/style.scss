@@ -1,0 +1,48 @@
+.blog{
+   margin: 0 0 100px 0;
+   &__top{
+      text-align: center;
+   }
+   &__row{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+   }
+   &__column{
+
+        flex: 0 1 calc(50% - 10px); 
+        width: 100%;
+        padding: 0 0 35% 0;
+        border-radius: 10px;
+        overflow: hidden;
+
+       &:first-child{
+         flex: 1 1 auto;
+       } 
+       &::before{
+         content: '';
+         position: absolute;
+         inset: 0;
+         background-color: #0000007f;
+       } 
+   }
+   &__content{
+      position: absolute;
+      padding: 50px;
+      top: 50%;
+      transform: translate(0, -50%);
+      color: #fff;
+   }
+   &__title{
+      font-size: 30px;
+      margin: 0 0 20px;
+   }
+   &__text{
+      line-height: 24px;
+      margin: 0 0 20px 0;
+   }
+   &__more{
+      text-align: center;
+      margin-top: 40px;
+   }
+}

@@ -1,0 +1,55 @@
+.footer{
+   
+   &__row{
+      display: flex;
+      gap: 50px;
+      padding: 50px 0;
+      border-top: 1px solid $blueL ;
+   }
+   &__column{
+      &:first-child{
+         flex: 0 1 40%;
+      }
+      flex: 0 1 250px;
+   }
+   &__logo{
+      display: inline-block;
+      margin: 0 0 20px 0;
+      img{
+         max-width: 100px;
+      }
+   }
+   &__methode{
+      display: block;
+      margin: 0 0 20px 0;
+   }
+
+   &__title{
+      font-weight: 700;
+      margin: 0 0 20px 0;
+   }
+
+}
+
+.social{
+   display: flex;
+   margin: 0 0 20px 0;
+   gap: 20px;
+}
+.items-footer{
+   &__li{
+      margin: 0 0 10px 0;
+      &:first-child{
+         font-size: 15px;
+      }
+      font-size: 12px;
+   }
+}
+.links-footer{
+   &__li{
+      margin: 0 0 10px 0;
+      &:hover{
+         color: $pink;
+      }
+   }
+}

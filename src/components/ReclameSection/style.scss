@@ -1,0 +1,39 @@
+.reclame{
+   margin: 0 0 100px 0;
+   &__row{
+      display: flex;
+      align-items: center;
+      gap: 80px;
+      
+   }
+   &__column{
+      flex: 0 1 50%;
+      
+   }  
+   &__img{
+      border-radius: 20px;
+      overflow: hidden;
+   } 
+   &__text{
+      line-height: 25px;
+      margin: 0 0 50px 0;
+   }
+
+   
+}
+
+.items-reclame{
+   display: flex;
+   gap: 50px;
+   &__col{
+      flex: 0 1 150px;
+   }
+   &__number{
+     color: $blue;
+     display: inline-block;
+     margin: 0 0 15px 0; 
+     font-weight: 700;
+     font-size: 30px;
+   }
+
+}

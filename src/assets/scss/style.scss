@@ -10,13 +10,36 @@ body{
   font-family: 'Roboto';
   color: $blueL;
   font-size: 16px;
-
+  
+}
+#root{
+  height: 100%;
 }
 
 .container {
   max-width: 1220px;
   padding: 0 10px;
   margin: 0 auto;
+}
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.main{
+  flex: 1 1 auto;
+}
+._ibg{
+  position: relative;
+  img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
 }
 
 .section-title{
@@ -49,5 +72,25 @@ body{
   }
 }
 .btn-arr{
+  color: $pink;
   
+  span{
+    padding-right: 25px;
+    background-image: url('../img/cards/arr.svg');
+    background-position: right 0.5px;
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+  }
+  &:hover{
+    span{
+      padding-right: 30px;
+    }
+  }
+  &_w{
+    color: #fff;
+    span{
+       background-image: url('../img/cards/arr-w.svg'); 
+    }
+  
+  }
 }
