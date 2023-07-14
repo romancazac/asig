@@ -1,0 +1,64 @@
+.form{
+   max-width: 750px;
+   margin: 0 auto 30px auto;
+   padding: 0 10px;
+   &__select{
+      margin: 0 0 3px 0;
+     &.error{
+      border-radius: 5px;
+      border: 1px solid red;
+     }
+   }
+   &__error{
+      display: inline-block;
+      font-size: 12px;
+      margin: 0 0 10px 0;
+      color: red;
+
+   }
+   &__row{
+      display: flex;
+      gap: 20px;
+      margin: 0 0 20px 0;
+   }
+   &__col{
+      flex: 1 1 auto;
+   }
+   &__line{
+      margin: 0 0 20px 0;
+
+   }
+   &__label{
+      display: inline-block;
+      margin: 0 0 10px 0;
+   }
+   &__input{
+      background-image: none !important;
+   }
+   &__add{
+     border: 1px dashed #53698020; 
+     width: 100%;
+     color: $blueL;
+     padding: 15px;
+     margin: 0 0 50px 0;
+      span{
+         padding-right: 25px;
+         background: url('../../assets/img/cards/add-icon.svg') right  no-repeat;
+      }
+   }
+   &__remove{
+      position: absolute;
+      top: 11px;
+      
+      right: 12px;
+   }
+   &__inp-wrapp{
+      position: relative;
+   }
+   &__btn{
+      margin-top: 50px ;
+   }
+}
+input[errorClass="error"]{
+border-color: red;
+}

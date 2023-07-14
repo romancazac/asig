@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import './style.scss'
-export const Spoller = ({ title, content, id }) => {
+export const Spoller = ({ title, children, id }) => {
    const [open, setOpen] = useState(false);
 
 
@@ -12,7 +12,7 @@ export const Spoller = ({ title, content, id }) => {
             {
                open &&
                <div className="spoller__content">
-                  {content}
+                  {children}
                </div>
             }
 
