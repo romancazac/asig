@@ -59,6 +59,20 @@
       margin-top: 50px ;
    }
 }
+.nav-form{
+  margin: 0 0 30px 0;
+   &__list{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+   }
+   &__item{
+      &._active{
+         color: $pink;
+      }
+   }
+}
 input[errorClass="error"]{
 border-color: red;
 }

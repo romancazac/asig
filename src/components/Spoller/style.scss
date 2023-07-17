@@ -5,7 +5,7 @@
       position: relative;
       font-weight: 700;
       padding:5px 0;
-      
+    
       &::after{
          content: '';
          position: absolute;
@@ -29,6 +29,33 @@
        
      
    }
+   &__logo{
+      display: flex;
+      align-items: center;
+      flex: 1 1 auto;
+      width: 100%;
+      height: 40px;
+      margin-left: 15px;
+      cursor: pointer ;
+      &.logo{
+         padding-left: 50px;
+         background-repeat: no-repeat;
+         background-position: left;
+         background-size: 40px;
+      }
+      &.intact{
+         background-image: url('../../assets/img/company/Intact.png');
+      }
+      &.donaris{
+         background-image: url('../../assets/img/company/Donaris.png');
+      }
+      &.transelit{
+         background-image: url('../../assets/img/company/Transelit.png');
+      }
+      &.general{
+         background-image: url('../../assets/img/company/General.png');
+      }
+   }
    &__body{
       padding: 10px 0;
       border-bottom: 1px solid $blueL;
@@ -37,5 +64,16 @@
       padding: 20px 0;
       line-height: 24px;
    }
-  
+   &__row{
+      &_company{
+         display: flex;
+         align-items: center;
+         width: 100%;
+    
+         .spoller__btn {
+            width: auto;
+            margin-left: 30px;
+         }
+      }
+   }  
 }

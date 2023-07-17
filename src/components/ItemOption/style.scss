@@ -1,0 +1,17 @@
+.spoller{
+   &__item{
+      padding-left: 25px;
+      font-size: 12px;
+      list-style: none;
+      background: url('../../assets/img/icons/check.svg') no-repeat left center ;
+      background-size: 17px;
+      &._uncheck {
+         background: url('../../assets/img/icons/cancel.svg') no-repeat left center ;
+         background-size: 17px;
+      }
+      
+      &:last-child{
+         margin: 0;
+      }
+   }
+}
