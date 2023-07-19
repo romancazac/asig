@@ -1,0 +1,27 @@
+.confirm{
+   padding: 20px;
+   border-radius: 10px;
+   
+   &__row{
+      display: flex;
+      justify-content: space-between;
+      margin: 0 0 10px 0;
+      gap: 15px;
+      &:last-child{
+         border-top:  1px solid $blueL;
+         padding-top: 20px;
+       
+      }
+      span{
+         &:last-child{
+            &::first-letter{
+               text-transform: uppercase;
+            }
+            text-align: right;
+         }
+      }
+      &:last-child{
+         margin: 0 ;
+      }
+   }
+}

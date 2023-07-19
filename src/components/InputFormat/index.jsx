@@ -41,7 +41,7 @@ export const InputFormat = ({ name = "", ...props }) => {
       onValueChange={(value) => {
         setValue(name, value);
       }}
-      placeholder="Data nasterii pers. asigurate"
+      
       className='form__input picker'
     
     />

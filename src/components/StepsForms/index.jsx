@@ -1,19 +1,11 @@
-import React, { useState } from 'react'
-import { FormMedical } from '../FormMedical'
+import React, { useContext, useState } from 'react'
+import { FormMedical } from '../StepsMedical'
+import { FormContext } from '../../contexts/FormContext'
 
-export const StepsForm = () => {
-   const [step,setStep] = useState(1);
-   const itemsStep = [
-      {  id:1,
-         name:"Călătorie"
-      },
-      {  id:2,
-         name:"Persoane"
-      },
-      {  id:3,
-         name:"Confirmare"
-      },
-   ]
+export const StepsForm = ({children,itemsStep}) => {
+
+   const {step} = useContext(FormContext)
+
    return (
       <div className='steps'>
          <div className="container">
@@ -26,11 +18,9 @@ export const StepsForm = () => {
                         )
                      }
                      
-                     {/* <li>2. Persoane</li>
-                     <li>3. Confirmare</li> */}
                   </ul>
                </nav>
-               <FormMedical setStep={setStep}/>
+               {children}
             </div>
          </div>
       </div>

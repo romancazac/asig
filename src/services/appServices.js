@@ -9,12 +9,10 @@ export const useAppServices = () => {
     const getCompany = () => {
         return request(`${BASE_URL}/company`)
     }
-    // const getJob = (id) => {
-    //     return request(`${BASE_URL}/jobs/${id}`)
-    // }
-    // const postJob = (body) => {
-    //     return request(`${BASE_URL}/jobs`,"POST",body)
-    // }
 
-    return { error, loading, succes, getCompany }
+    const postComand = (body) => {
+        return request(`${BASE_URL}/comands`,"POST",body)
+    }
+
+    return { error, loading, succes, getCompany,postComand }
 }

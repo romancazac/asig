@@ -1,32 +1,32 @@
 import React from 'react'
 import { TopBannerSingle } from '../components/TopBannerSingle'
-import img from '../assets/img/cards/medical.png'
+import img from '../assets/img/cards/medical-optional.png'
 
 import { StepsForm } from '../components/StepsForms'
 import { FormMedical } from '../components/StepsMedical'
 
-export const Medical = () => {
+export const MedicalFacultative = () => {
    const itemsStep = [
       {  id:1,
-         name:"Călătorie"
+         name:"Asigurare"
       },
       {  id:2,
          name:"Persoane"
       },
       {  id:3,
          name:"Confirmare"
-      },
+      }
    ]
    return (
       <>
          <TopBannerSingle
             img={img}
-            title='Medicală pentru călătorii'
-            text='Asigurare medicală pentru călătorii în străinătate. Alege teritoriul asigurat, tipul de călătorie, perioada de valabilitate a poliței, suma asigurată și riscurile suplimentare, inclusiv COVID-19.'
-            bg='cards__column_medical'
+            title='Medicala facultativă'
+            text='Pentru nerezidenți, valabilă în Moldova.'
+            bg='cards__column_pink'
          />
          <StepsForm itemsStep={itemsStep}>
-            <FormMedical/>
+            'Form Medical facultativa'
          </StepsForm>
 
       </>

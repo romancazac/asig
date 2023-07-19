@@ -34,6 +34,16 @@
    }
    &__input{
       background-image: none !important;
+      border: 1px solid $blueL;
+      height: 40px;
+      width: 100%;
+      padding: 10px;
+      color: $blueL;
+      border-radius: 5px;
+      margin: 0 0 3px 0;
+      &:focus{
+         border-color: $blue;
+      }
    }
    &__add{
      border: 1px dashed #53698020; 
@@ -73,6 +83,11 @@
       }
    }
 }
+
+
+
+
+
 input[errorClass="error"]{
 border-color: red;
 }

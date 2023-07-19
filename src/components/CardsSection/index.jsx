@@ -29,7 +29,7 @@ export const CardsSection = () => {
               <h3 className="cards__title">Carte Verde</h3>
               <p className="cards__text">Pentru vehicule înmatriculate în Moldova, valabilă peste hotare.</p>  
             </div>
-            <a href="#" className="cards__link btn-arr"> <span>Comanda</span></a>
+            <Link to='green-card' className="cards__link btn-arr"> <span>Comanda</span></Link>
           </div>
           <div className="cards__column cards__column_blue">
             <img className="cards__img" src={m2} alt="" />
@@ -37,7 +37,7 @@ export const CardsSection = () => {
               <h3 className="cards__title">RCA</h3>
               <p className="cards__text">Pentru vehicule înmatriculate în Moldova.</p>  
             </div>
-            <a href="#" className="cards__link btn-arr"> <span>Comanda</span></a>
+            <Link to='rca' className="cards__link btn-arr"> <span>Comanda</span></Link>
           </div>
           <div className="cards__column cards__column_pink">
             <img className="cards__img" src={m4} alt="" />
@@ -45,7 +45,7 @@ export const CardsSection = () => {
               <h3 className="cards__title">Medicala facultativă</h3>
               <p className="cards__text">Pentru nerezidenți, valabilă în Moldova.</p>  
             </div>
-            <a href="#" className="cards__link btn-arr"> <span>Comanda</span></a>
+            <Link to='medical-facultative' className="cards__link btn-arr"> <span>Comanda</span></Link>
           </div>
           <div className="cards__column cards__column_orange">
             <img className="cards__img" src={m5} alt="" />
@@ -53,7 +53,7 @@ export const CardsSection = () => {
               <h3 className="cards__title">Ipoteca</h3>
               <p className="cards__text">Pentru ipotecă și bunuri imobile gajate.</p>  
             </div>
-            <a href="#" className="cards__link btn-arr"> <span>Comanda</span></a>
+            <Link to='ipoteca' className="cards__link btn-arr"> <span>Comanda</span></Link>
           </div>
         </div>
 
