@@ -4,7 +4,7 @@ import { Spoller } from '../Spoller'
 import { useContext } from 'react'
 import { FormContext } from '../../contexts/FormContext'
 import { ItemOption } from '../ItemOption'
-export const AsigCompany = ({values}) => {
+export const AsigCompany = ({ values, form}) => {
 
   const { company } = useContext(FormContext)
 
@@ -14,7 +14,13 @@ export const AsigCompany = ({values}) => {
       {
         company?.map((item) =>
 
-          <Spoller key={item.id} title={item.name} {...item} company={true} values={values}>
+          <Spoller
+            key={item.id}
+            {...item}   
+            option={true}
+            values={values}
+            form={form}
+          >
             <ul className="spoller__list">
               {
                 item?.options.map((option, i) =>

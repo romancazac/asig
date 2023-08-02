@@ -2,16 +2,18 @@ import React from 'react'
 import { TopBannerSingle } from '../components/TopBannerSingle'
 import img from '../assets/img/cards/car2.png'
 
-import { StepsForm } from '../components/StepsForms'
+import { StepsForm } from '../components/StepsForm'
 
 
 export const Rca = () => {
    const itemsStep = [
-      {  id:1,
-         name:"Asigurare"
+      {
+         id: 1,
+         name: "Asigurare"
       },
-      {  id:2,
-         name:"Confirmare"
+      {
+         id: 2,
+         name: "Confirmare"
       }
    ]
    return (

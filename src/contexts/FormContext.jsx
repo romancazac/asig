@@ -1,5 +1,6 @@
 import  { createContext, useEffect, useState } from 'react';
 import { useAppServices } from '../services/appServices';
+import { dataCompany } from '../utils/data';
 
 
 
@@ -22,7 +23,7 @@ useEffect(() => {
 
 
     return (
-       <FormContext.Provider value={{company,step, setStep}}>
+       <FormContext.Provider value={{company:dataCompany,step, setStep}}>
              {children}
        </FormContext.Provider>
     );

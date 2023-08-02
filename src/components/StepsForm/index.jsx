@@ -1,10 +1,10 @@
-import React, { useContext, useState } from 'react'
-import { FormMedical } from '../StepsMedical'
+import React, { useContext } from 'react'
+
 import { FormContext } from '../../contexts/FormContext'
 
-export const StepsForm = ({children,itemsStep}) => {
+export const StepsForm = ({ children, itemsStep }) => {
 
-   const {step} = useContext(FormContext)
+   const { step } = useContext(FormContext)
 
    return (
       <div className='steps'>
@@ -13,11 +13,11 @@ export const StepsForm = ({children,itemsStep}) => {
                <nav className="form__nav nav-form">
                   <ul className="nav-form__list">
                      {
-                        itemsStep?.map((s) => 
-                        <li key={s.id} className={`nav-form__item ${s.id === step ? '_active' : ''}`}>{s.id} {s.name}</li>
+                        itemsStep?.map((s) =>
+                           <li key={s.id} className={`nav-form__item ${s.id === step ? '_active' : ''}`}>{s.id} {s.name}</li>
                         )
                      }
-                     
+
                   </ul>
                </nav>
                {children}

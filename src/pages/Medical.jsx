@@ -2,19 +2,22 @@ import React from 'react'
 import { TopBannerSingle } from '../components/TopBannerSingle'
 import img from '../assets/img/cards/medical.png'
 
-import { StepsForm } from '../components/StepsForms'
-import { FormMedical } from '../components/StepsMedical'
+import { StepsForm } from '../components/StepsForm'
+import { FormMedical } from '../components/FormMedical'
 
 export const Medical = () => {
    const itemsStep = [
-      {  id:1,
-         name:"Călătorie"
+      {
+         id: 1,
+         name: "Călătorie"
       },
-      {  id:2,
-         name:"Persoane"
+      {
+         id: 2,
+         name: "Persoane"
       },
-      {  id:3,
-         name:"Confirmare"
+      {
+         id: 3,
+         name: "Confirmare"
       },
    ]
    return (
@@ -26,7 +29,7 @@ export const Medical = () => {
             bg='cards__column_medical'
          />
          <StepsForm itemsStep={itemsStep}>
-            <FormMedical/>
+            <FormMedical />
          </StepsForm>
 
       </>

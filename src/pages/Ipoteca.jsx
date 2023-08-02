@@ -2,19 +2,22 @@ import React from 'react'
 import { TopBannerSingle } from '../components/TopBannerSingle'
 import img from '../assets/img/cards/real-estate.png'
 
-import { StepsForm } from '../components/StepsForms'
-import { FormMedical } from '../components/StepsMedical'
+import { StepsForm } from '../components/StepsForm'
+import { FormMedical } from '../components/FormMedical'
 
 export const Ipoteca = () => {
    const itemsStep = [
-      {  id:1,
-         name:"Ipoteca"
+      {
+         id: 1,
+         name: "Ipoteca"
       },
-      {  id:2,
-         name:"Contractor"
+      {
+         id: 2,
+         name: "Contractor"
       },
-      {  id:3,
-         name:"Confirmare"
+      {
+         id: 3,
+         name: "Confirmare"
       }
    ]
    return (

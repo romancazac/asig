@@ -7,23 +7,26 @@ import { useAppServices } from '../../services/appServices';
 import { MedicalStepOne } from '../MedicalStepOne';
 import { MedicalStepTwo } from '../MedicalStepTwo';
 import { MedicalStepThree } from '../MedicalStepThree';
-
-import './style.scss';
+import { differenceInDays } from 'date-fns';
 import { FormContext } from '../../contexts/FormContext';
+import './style.scss';
 
 
 export const FormMedical = () => {
   const { postComand, loading } = useAppServices()
-  const {step, setStep} = useContext(FormContext)
+  const { step, setStep } = useContext(FormContext)
 
   const stepOneSchema = Yup.object().shape({
     multiple: Yup.boolean(),
     country: Yup.array().min(1, 'Selectați una sau mai multe țări'),
-    daysAsig: Yup.string().required('Selectați numărul de zile asigurate'),
+    daysAsig: Yup.string().when("multiple", {
+      is: true,
+      then: (stepOneSchema) => stepOneSchema.required('Selectați numărul de zile asigurate')
+    }),
     startDate: Yup.string().required('Selctati începutul perioadei asigurate'),
     endDate: Yup.string().when("multiple", {
       is: false,
-      then: (MedicalSchema) => MedicalSchema.required('Selectati sfârșitul perioadei asigurate'),
+      then: (stepOneSchema) => stepOneSchema.required('Selectati sfârșitul perioadei asigurate'),
     }),
     scope: Yup.string().required('Selectati scopul calatoriei'),
     personalInfo: Yup.array().of(Yup.object().shape({
@@ -78,6 +81,7 @@ export const FormMedical = () => {
 
   }
 
+
   return (
     <>
       <Formik
@@ -111,9 +115,17 @@ export const FormMedical = () => {
               {step === 2 && <MedicalStepTwo values={values} />}
               {step === 3 && <MedicalStepThree values={values} />}
 
-              {isValid && step === 1 && <AsigCompany values={values} />}
+              {
+                isValid && step === 1 &&
 
-              <div className="form__row">
+                <AsigCompany
+                  values={values}
+                  form={'medical'}
+                />
+                
+              }
+         
+              <div className="form__row form__row_footer">
                 {
                   step > 1 &&
                   <button type='button' onClick={() => onPrevStep()} className='form__btn btn-block'>
@@ -123,11 +135,11 @@ export const FormMedical = () => {
                 {
                   step < 3 ?
                     <button type='button' onClick={() => onNextStep(isValid, submitForm)} className='form__btn btn-block'>
-                      Next step
+                      Următorul pas
                     </button>
                     :
                     <button type='submit' className='form__btn btn-block'>
-                      Submit
+                      Comanda
                       {loading && "Posted..."}
                     </button>
 

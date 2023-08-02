@@ -4,7 +4,7 @@ import './style.scss'
 
 
 import { differenceInDays } from 'date-fns';
-export const Spoller = ({ title, children, name, company, price, values, className = null }) => {
+export const Spoller = ({ title, children, name, form, option, price, values, className = null }) => {
    const [open, setOpen] = useState(false);
    let classLogo = '';
 
@@ -36,37 +36,52 @@ export const Spoller = ({ title, children, name, company, price, values, classNa
       return daysDifference;
    }
    const days = values?.multiple ? values?.daysAsig : calculateDays();
+   const calcMedical = () => {
+      return  ((days * price) * values?.personalInfo?.length).toFixed(2)
+   }
+   const calcGreencard = () => {
+      return  (price * values.daysAsig).toFixed(2)
+   }
 
-
+   const valueTotal = (form === 'medical' && calcMedical()) || (form === 'greenCard' && calcGreencard()) 
 
    return (
       <div className={`quati__spoller spoller ${className}`}>
          <div className="spoller__body">
-            <div className={`spoller__row ${company ? 'spoller__row_company' : ''}`}>
+            <div className={`spoller__row ${option ? 'spoller__row_company' : ''}`}>
                {
-                  company &&
+                  option &&
                   <>
                      <input
                         type="radio"
                         name="price"
                         id={name}
+                        checked={values.company === name? true : false}
                         onChange={
                            (e) => {
-                           formik.setFieldValue("price", e.target.value)
-                           formik.setFieldValue("company", name)}}
+                              formik.setFieldValue("price", e.target.value)
+                              formik.setFieldValue("company", name)
+                           }}
                         placeholder={title}
-                        value={(days * price).toFixed(2)}
+                        value={valueTotal}
                      />
-                     <label  htmlFor={name} className={`spoller__logo ${classLogo}`} >{name}</label>
+                     <label htmlFor={name} className={`spoller__logo ${classLogo}`} >{name}</label>
+                     {form === 'greenCard' && calcGreencard()}
+                     {form === 'medical' &&  calcMedical()}  Euro
 
-                     {((days * price) * values.personalInfo.length).toFixed(2)} Euro
 
                   </>
                }
+               {
+                  form === 'medical' &&
+                  <button
+                     type='button'
+                     onClick={() => setOpen(!open)}
+                     className={`spoller__btn ${open ? "_active" : ''}`}>
+                     <span>{!option && title}</span>
+                  </button>
+               }
 
-               <button
-                  onClick={() => setOpen(!open)}
-                  className={`spoller__btn ${open ? "_active" : ''}`}><span>{!company && title}</span></button>
 
             </div>
 

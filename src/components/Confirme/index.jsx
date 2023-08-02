@@ -7,12 +7,13 @@ export const Confirme = ({ bg, children, price }) => {
          {
             children
          }
-
-         <div className="confirm__row">
-            <span>Preț total:</span>
-            <span>{price} Euro</span>
-         </div>
-
+         {
+            !!price &&
+            <div className="confirm__row">
+               <span>Preț total:</span>
+               <span>{price} Euro</span>
+            </div>
+         }
 
       </div>
    )

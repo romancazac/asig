@@ -9,9 +9,6 @@ export const CheckboxFormik = ({ children, ...props }) => {
             <input className='checkbox__inp' type="checkbox" {...field} {...props} />
             <span>{children}</span>
          </label>
-         {meta.touched && meta.error ? (
-            <div className="error">{meta.error}</div>
-         ) : null}
       </>
    );
 }
