@@ -3,6 +3,7 @@ import { TopBannerSingle } from '../components/TopBannerSingle'
 import img from '../assets/img/cards/car2.png'
 
 import { StepsForm } from '../components/StepsForm'
+// import { FormRca } from '../components/FormRca'
 
 
 export const Rca = () => {
@@ -25,7 +26,7 @@ export const Rca = () => {
             bg='cards__column_blue'
          />
          <StepsForm itemsStep={itemsStep}>
-            'Form Rca'
+            {/* <FormRca/> */}
          </StepsForm>
 
       </>

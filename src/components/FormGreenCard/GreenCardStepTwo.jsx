@@ -14,7 +14,7 @@ export const GreenCardStepTwo = ({ values }) => {
             >
                <div className="confirm__row">
                   <span>Perioada asigurată:</span>
-                  <span>{addDaysToDate(values?.startDate, values?.daysAsig)}</span>
+                  {/* <span>{addDaysToDate(values?.startDate, values?.daysAsig)}</span> */}
                </div>
                <div className="confirm__row">
                   <span>Asigurat:</span>

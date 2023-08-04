@@ -29,7 +29,7 @@ export const Medical = () => {
             bg='cards__column_medical'
          />
          <StepsForm itemsStep={itemsStep}>
-            <FormMedical />
+            <FormMedical itemsStep={itemsStep}/>
          </StepsForm>
 
       </>

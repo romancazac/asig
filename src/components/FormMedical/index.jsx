@@ -1,19 +1,20 @@
-import { useContext, useEffect } from 'react';
+import { useContext} from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { v4 as uuidv4 } from 'uuid';
 import { AsigCompany } from '../AsigCompany';
 import { useAppServices } from '../../services/appServices';
-import { MedicalStepOne } from '../MedicalStepOne';
-import { MedicalStepTwo } from '../MedicalStepTwo';
-import { MedicalStepThree } from '../MedicalStepThree';
-import { differenceInDays } from 'date-fns';
+
+import { MedicalStepTwo } from './MedicalStepTwo';
+import { MedicalStepThree } from './MedicalStepThree';
 import { FormContext } from '../../contexts/FormContext';
 import './style.scss';
+import { MedicalStepOne } from './MedicalStepOne';
+import { NavSteps } from '../NavSteps';
 
 
-export const FormMedical = () => {
-  const { postComand, loading } = useAppServices()
+export const FormMedical = ({ itemsStep }) => {
+  const { postComand, loading, error, succes } = useAppServices()
   const { step, setStep } = useContext(FormContext)
 
   const stepOneSchema = Yup.object().shape({
@@ -60,24 +61,14 @@ export const FormMedical = () => {
 
   const schemValidation = (step === 1 && stepOneSchema) || (step === 2 && stepTwoSchema) || (step === 3 && stepThreeSchema);
 
+  const onSubmit = async (values) => {
 
-  const onNextStep = (valid, submitForm) => {
-
-    if (valid) {
-      setStep(prev => prev + 1);
+    if (step < itemsStep.length) {
+      setStep(prev => prev + 1)
     } else {
-      submitForm();
+      await postComand(values);
     }
-  };
-  const onPrevStep = () => {
-    setStep(prev => prev - 1)
-  }
-
-  const onSubmit = async (values, actions) => {
-
-    await postComand(values);
-    actions.resetForm()
-    setStep(1)
+ 
 
   }
 
@@ -102,12 +93,9 @@ export const FormMedical = () => {
         validationSchema={schemValidation}
         onSubmit={onSubmit}
       >
-        {({ errors, touched, values, isValid, validateForm, submitForm }) => {
+        {({ errors, touched, values, isValid}) => (
 
-          useEffect(() => {
-            validateForm()
-          }, [values]);
-          return (
+        
             <Form>
 
 
@@ -122,35 +110,12 @@ export const FormMedical = () => {
                   values={values}
                   form={'medical'}
                 />
-                
+
               }
-         
-              <div className="form__row form__row_footer">
-                {
-                  step > 1 &&
-                  <button type='button' onClick={() => onPrevStep()} className='form__btn btn-block'>
-                    Prev step
-                  </button>
-                }
-                {
-                  step < 3 ?
-                    <button type='button' onClick={() => onNextStep(isValid, submitForm)} className='form__btn btn-block'>
-                      Următorul pas
-                    </button>
-                    :
-                    <button type='submit' className='form__btn btn-block'>
-                      Comanda
-                      {loading && "Posted..."}
-                    </button>
-
-                }
-
-              </div>
-
-
+              <NavSteps itemsStep={itemsStep} error={error} succes={succes} loading={loading} />
             </Form>
-          )
-        }
+          
+        )
         }
       </Formik>
     </ >

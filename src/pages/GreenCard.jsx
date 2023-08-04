@@ -26,7 +26,7 @@ export const GreenCard = () => {
             bg='cards__column_green'
          />
          <StepsForm itemsStep={itemsStep}>
-            <FormGreenCard/>
+            <FormGreenCard itemsStep={itemsStep}/>
          </StepsForm>
 
       </>

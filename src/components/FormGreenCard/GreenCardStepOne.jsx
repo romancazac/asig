@@ -1,5 +1,4 @@
-import React from 'react'
-import { format, addDays } from 'date-fns'
+
 import { ErrorMessage, Field } from 'formik'
 import { CheckboxFormik } from '../CheckboxFormik'
 import { CheckboxCountry } from '../CheckboxCountry'
@@ -9,6 +8,8 @@ import { MultiSelect } from '../MultiSelect/MultiSelect'
 import { Confirme } from '../Confirme'
 import { AsigCompany } from '../AsigCompany'
 import { addDaysToDate } from '../../utils/addDaysToDate'
+
+
 export const GreenCardStepOne = ({ values, isValid }) => {
 
    return (
@@ -20,16 +21,16 @@ export const GreenCardStepOne = ({ values, isValid }) => {
 
 
                   <CheckboxCountry
-                     name="country"
+                     name="country.name"
                      title={c.name}
                      value={c.value}
                      key={i}
-
+                     checked={values?.country?.name === c.name? true : false}
                   />
                )
             }
 
-            <ErrorMessage name='country' component="span" className='form__error' />
+            <ErrorMessage name='country.name' component="span" className='form__error' />
          </div>
          <div className="form__line">
             <span className="form__label">Asigurat IDNP sau IDNO</span>
@@ -80,7 +81,7 @@ export const GreenCardStepOne = ({ values, isValid }) => {
 
          <div className="form__line">
 
-            <CheckboxFormik name='term'>Sunt de acord cu termenii și condițiile iasig.md și îmi exprim consimțământul pentru prelucrarea datelor cu caracter personal.</CheckboxFormik>
+            <CheckboxFormik name='term'>Sunt de acord cu termenii și condițiile asig.md și îmi exprim consimțământul pentru prelucrarea datelor cu caracter personal.</CheckboxFormik>
             <ErrorMessage name='term' component="span" className='form__error' />
 
          </div>
