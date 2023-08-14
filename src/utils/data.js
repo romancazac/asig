@@ -59,35 +59,35 @@ export const dataContrysGreenCard = [
 export const dataCompany = [
   {
     name: "Donaris",
-    price:"0.2",
-    options:[
+    price: "0.2",
+    options: [
       {
-        name:"Asistență medicală de urgență",
-        include:true
+        name: "Asistență medicală de urgență",
+        include: true
       },
       {
-        name:"Costul medicamentelor prescrise",
-        include:true
+        name: "Costul medicamentelor prescrise",
+        include: true
       },
       {
-        name:"Cheltuieli de transport",
-        include:true
+        name: "Cheltuieli de transport",
+        include: true
       },
       {
-        name:"Tratament stomatologic de urgență (200 EUR)",
-        include:true
+        name: "Tratament stomatologic de urgență (200 EUR)",
+        include: true
       },
       {
-        name:"Complicații ale sarcinii",
-        include:true
+        name: "Complicații ale sarcinii",
+        include: true
       },
       {
-        name:"Repatriere medicală și postmortem",
-        include:true
+        name: "Repatriere medicală și postmortem",
+        include: true
       },
       {
-        name:"Cheltuieli legate de anularea călătoriei",
-        include:false
+        name: "Cheltuieli legate de anularea călătoriei",
+        include: false
       },
     ]
 
@@ -95,35 +95,35 @@ export const dataCompany = [
   },
   {
     name: "Transelit",
-    price:"0.24",
-    options:[
+    price: "0.24",
+    options: [
       {
-        name:"Asistență medicală de urgență",
-        include:true
+        name: "Asistență medicală de urgență",
+        include: true
       },
       {
-        name:"Costul medicamentelor prescrise",
-        include:true
+        name: "Costul medicamentelor prescrise",
+        include: true
       },
       {
-        name:"Cheltuieli de transport",
-        include:true
+        name: "Cheltuieli de transport",
+        include: true
       },
       {
-        name:"Tratament stomatologic de urgență (150 USD)",
-        include:true
+        name: "Tratament stomatologic de urgență (150 USD)",
+        include: true
       },
       {
-        name:"Repatriere medicală și postmortem",
-        include:true
+        name: "Repatriere medicală și postmortem",
+        include: true
       },
       {
-        name:"Complicații ale sarcinii",
-        include:false
+        name: "Complicații ale sarcinii",
+        include: false
       },
       {
-        name:"Cheltuieli legate de anularea călătoriei",
-        include:false
+        name: "Cheltuieli legate de anularea călătoriei",
+        include: false
       },
     ]
 
@@ -131,36 +131,36 @@ export const dataCompany = [
   },
   {
     name: "Intact",
-    price:"0.30",
-    options:[
+    price: "0.30",
+    options: [
       {
-        name:"Asistență medicală de urgență",
-        include:true
+        name: "Asistență medicală de urgență",
+        include: true
       },
       {
-        name:"Costul medicamentelor prescrise",
-        include:true
+        name: "Costul medicamentelor prescrise",
+        include: true
       },
       {
-        name:"Cheltuieli de transport",
-        include:true
+        name: "Cheltuieli de transport",
+        include: true
       },
       {
-        name:"Repatriere medicală și postmortem",
-        include:true
+        name: "Repatriere medicală și postmortem",
+        include: true
       },
       {
-        name:"Tratament stomatologic de urgență",
-        include:false
+        name: "Tratament stomatologic de urgență",
+        include: false
       },
-     
+
       {
-        name:"Complicații ale sarcinii",
-        include:false
+        name: "Complicații ale sarcinii",
+        include: false
       },
       {
-        name:"Cheltuieli legate de anularea călătoriei",
-        include:false
+        name: "Cheltuieli legate de anularea călătoriei",
+        include: false
       },
     ]
 
@@ -168,40 +168,97 @@ export const dataCompany = [
   },
   {
     name: "General",
-    price:"0.30",
-    options:[
+    price: "0.30",
+    options: [
       {
-        name:"Asistență medicală de urgență",
-        include:true
+        name: "Asistență medicală de urgență",
+        include: true
       },
       {
-        name:"Costul medicamentelor prescrise",
-        include:true
+        name: "Costul medicamentelor prescrise",
+        include: true
       },
       {
-        name:"Cheltuieli de transport",
-        include:true
+        name: "Cheltuieli de transport",
+        include: true
       },
       {
-        name:"Repatriere medicală și postmortem",
-        include:true
+        name: "Repatriere medicală și postmortem",
+        include: true
       },
       {
-        name:"Tratament stomatologic de urgență (150 EUR)",
-        include:true
+        name: "Tratament stomatologic de urgență (150 EUR)",
+        include: true
       },
-     
+
       {
-        name:"Complicații ale sarcinii (500 EUR)",
-        include:true
+        name: "Complicații ale sarcinii (500 EUR)",
+        include: true
       },
       {
-        name:"Cheltuieli legate de anularea călătoriei",
-        include:false
+        name: "Cheltuieli legate de anularea călătoriei",
+        include: false
       },
     ]
 
 
   },
 
+]
+
+export const dataFactori = [
+  { value: 0.10, label: " Prezența bolilor cronice" },
+  { value: 0.15, label: " Condiții nocive de muncă" }
+
+]
+export const dataImobile = [
+  { value: "rooms", label: "Încăpere (apartament, oficiu)" },
+  { value: "building", label: "Construcţie (casă, clădire)" },
+  { value: "terrain", label: "Teren" }
+
+]
+export const dataBase = [
+  { value: "VL", label: "Valoarea de înlocuire" },
+  { value: "VP", label: "Valoare de piață" },
+
+]
+export const dataBenefice = [
+  { value: "micb", label: "BC Moldindconbank S.A." },
+  { value: "maib", label: "BC Agroindbank S.A." },
+  { value: "victoria", label: "BC Victoriabank S.A." },
+  { value: "other", label: "Altul" },
+
+]
+export const dataAsk = [
+  {
+
+    "id":0,
+    "title": "Asigurarea comandată online este valabilă instant?",
+    "body":"Da. Toate tipurile de asigurări care sunt comandate și achitate online sunt emise imediat în regim automat."
+  },
+   {
+
+    "id":1,
+    "title": "Care sunt metodele disponibile de achitare?",
+    "body":"Orice comandă poate fi achitată online cu cardul bancar sau la terminale de plată, ghișeu bancar sau la poștă prin intermediul mPay."
+  },
+   {
+
+    "id":2,
+    "title": "Asigurarea comandată online este valabilă instant?",
+    "body":"Da. Toate tipurile de asigurări care sunt comandate și achitate online sunt emise imediat în regim automat."
+  },
+   {
+
+    "id":3,
+    "title": "Cum primesc asigurarea?",
+    "body":"Asigurarea o puteți descarca de pe site imediat dupa ce ați efectuat plata sau o primiţi in format PDF pe adresa de email indicată.."
+  },
+   {
+
+    "id":4,
+    "title": "Este valabilă asigurarea în format electronic?",
+    "body":"Da. Asigurările în format electronic sunt valide și legale. Valabilitatea RCA și Carte Verde poate fi verificată pe rca.bnm.md Polița și contractul de asigurare sunt semnate electronic, valabilitatea semnăturii poate fi verificată pe msign.gov.md"
+  },
+  
 ]

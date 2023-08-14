@@ -13,6 +13,12 @@ export const useAppServices = () => {
     const postComand = (body) => {
         return request(`${BASE_URL}/comands`,"POST",body)
     }
+    const getArticles  = () => {
+        return request(`${BASE_URL}/blog`)
+    }
+    const getArticle  = (id) => {
+        return request(`${BASE_URL}/blog/${id}`)
+    }
 
-    return { error, loading, succes, getCompany,postComand }
+    return { error, loading, succes, getCompany,postComand,getArticles,getArticle  }
 }

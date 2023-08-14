@@ -37,13 +37,13 @@ export const Spoller = ({ title, children, name, form, option, price, values, cl
    }
    const days = values?.multiple ? values?.daysAsig : calculateDays();
    const calcMedical = () => {
-      return  ((days * price) * values?.personalInfo?.length).toFixed(2)
+      return ((days * price) * values?.personalInfo?.length).toFixed(2)
    }
    const calcGreencard = () => {
-      return  (price * values.daysAsig).toFixed(2)
+      return (price * values.daysAsig).toFixed(2)
    }
 
-   const valueTotal = (form === 'medical' && calcMedical()) || (form === 'greenCard' && calcGreencard()) 
+   const valueTotal = (form === 'medical' && calcMedical()) || (form === 'greenCard' && calcGreencard())
 
    return (
       <div className={`quati__spoller spoller ${className}`}>
@@ -56,7 +56,7 @@ export const Spoller = ({ title, children, name, form, option, price, values, cl
                         type="radio"
                         name="price"
                         id={name}
-                        checked={values.company === name? true : false}
+                        checked={values.company === name ? true : false}
                         onChange={
                            (e) => {
                               formik.setFieldValue("price", e.target.value)
@@ -67,20 +67,19 @@ export const Spoller = ({ title, children, name, form, option, price, values, cl
                      />
                      <label htmlFor={name} className={`spoller__logo ${classLogo}`} >{name}</label>
                      {form === 'greenCard' && calcGreencard()}
-                     {form === 'medical' &&  calcMedical()}  Euro
+                     {form === 'medical' && calcMedical()}  Euro
 
 
                   </>
                }
-               {
-                  form === 'medical' &&
-                  <button
-                     type='button'
-                     onClick={() => setOpen(!open)}
-                     className={`spoller__btn ${open ? "_active" : ''}`}>
-                     <span>{!option && title}</span>
-                  </button>
-               }
+
+               <button
+                  type='button'
+                  onClick={() => setOpen(!open)}
+                  className={`spoller__btn ${open ? "_active" : ''}`}>
+                  <span>{!option && title}</span>
+               </button>
+
 
 
             </div>

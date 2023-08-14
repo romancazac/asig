@@ -6,6 +6,7 @@ import i2 from '../../assets/img/icons/vb.svg'
 import i3 from '../../assets/img/icons/insta.svg'
 import i4 from '../../assets/img/icons/wt.svg'
 import methode from '../../assets/img/footer/01.png'
+import { Link } from 'react-router-dom'
 export const Footer = () => {
   return (
     <footer className='footer'>
@@ -33,16 +34,16 @@ export const Footer = () => {
             <div className="footer__column">
                <h4 className="footer__title">Asigurări</h4>
                <ul className="footer__links links-footer">
-                  <li className="links-footer__li"><a href="#" className="links-footer__link">Carte Verde</a></li>
-                  <li className="links-footer__li"><a href="#" className="links-footer__link">RCA</a></li>
-                  <li className="links-footer__li"><a href="#" className="links-footer__link">Medicala pentru călătorii</a></li>
+                  <li className="links-footer__li"><Link to='green-card' className="links-footer__link">Carte Verde</Link></li>
+                  <li className="links-footer__li"><Link to='rca' className="links-footer__link">RCA</Link></li>
+                  <li className="links-footer__li"><Link to='medical' className="links-footer__link">Medicala pentru călătorii</Link></li>
                </ul>
             </div>
             <div className="footer__column">
                <h4 className="footer__title">Despre noi</h4>
                <ul className="footer__links links-footer">
-                  <li className="links-footer__li"><a href="#" className="links-footer__link">Contact</a></li>
-                  <li className="links-footer__li"><a href="#" className="links-footer__link">Blog</a></li>
+                  <li className="links-footer__li"><Link to='contact' className="links-footer__link">Contact</Link></li>
+                  <li className="links-footer__li"><Link to='blog' className="links-footer__link">Blog</Link></li>
                  
                </ul>
             </div>

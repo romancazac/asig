@@ -4,6 +4,7 @@ import img from '../assets/img/cards/medical-optional.png'
 
 
 import { StepsForm } from '../components/StepsForm'
+import { FormFacultative } from '../components/FormFacultative'
 
 export const MedicalFacultative = () => {
    const itemsStep = [
@@ -28,9 +29,9 @@ export const MedicalFacultative = () => {
             text='Pentru nerezidenți, valabilă în Moldova.'
             bg='cards__column_pink'
          />
-         <StepsMedical itemsStep={itemsStep}>
-            'Form Medical facultativa'
-         </StepsMedical>
+         <StepsForm itemsStep={itemsStep}>
+            <FormFacultative itemsStep={itemsStep}/>
+         </StepsForm>
 
       </>
    )

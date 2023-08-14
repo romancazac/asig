@@ -1,4 +1,4 @@
-import { useContext} from 'react';
+import { useContext, useEffect } from 'react';
 import { Formik, Form } from 'formik';
 import * as Yup from 'yup';
 import { v4 as uuidv4 } from 'uuid';
@@ -68,7 +68,7 @@ export const FormMedical = ({ itemsStep }) => {
     } else {
       await postComand(values);
     }
- 
+
 
   }
 
@@ -93,9 +93,12 @@ export const FormMedical = ({ itemsStep }) => {
         validationSchema={schemValidation}
         onSubmit={onSubmit}
       >
-        {({ errors, touched, values, isValid}) => (
+        {({ errors, touched, values, isValid, validateForm }) => {
+          useEffect(() => { validateForm() }, [])
 
-        
+          return (
+
+
             <Form>
 
 
@@ -114,9 +117,9 @@ export const FormMedical = ({ itemsStep }) => {
               }
               <NavSteps itemsStep={itemsStep} error={error} succes={succes} loading={loading} />
             </Form>
-          
-        )
-        }
+
+          )
+        }}
       </Formik>
     </ >
   );

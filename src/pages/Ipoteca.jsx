@@ -3,7 +3,8 @@ import { TopBannerSingle } from '../components/TopBannerSingle'
 import img from '../assets/img/cards/real-estate.png'
 
 import { StepsForm } from '../components/StepsForm'
-import { FormMedical } from '../components/FormMedical'
+
+import { FormIpotec } from '../components/FormIpotec'
 
 export const Ipoteca = () => {
    const itemsStep = [
@@ -29,7 +30,7 @@ export const Ipoteca = () => {
             bg='cards__column_orange'
          />
          <StepsForm itemsStep={itemsStep}>
-            'Form Ipoteca'
+            <FormIpotec itemsStep={itemsStep}/>
          </StepsForm>
 
       </>
