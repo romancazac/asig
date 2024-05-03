@@ -16,6 +16,12 @@ export const MainSection = () => {
           </div>
           <img className='main-section__img' src={svg} alt="asig" />
         </div>
+            <video muted playsinline autoPlay loop>
+          <source src={video} type="video/mp4" />
+        </video>
+        <video muted playsinline autoPlay loop>
+          <source src={video2} type="video/mp4" />
+        </video>
       </div>
     </section>
 
