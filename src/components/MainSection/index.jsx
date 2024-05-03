@@ -2,6 +2,8 @@ import React from 'react'
 import './style.scss'
 
 import svg from '../../assets/img/img-main.svg'
+import video from "../../assets/img/video.mp4";
+import video2 from "../../assets/img/01.mp4";
 export const MainSection = () => {
   return (
     <section className='main-section'>
