@@ -19,6 +19,9 @@ export const useAppServices = () => {
     const getArticle  = (id) => {
         return request(`${BASE_URL}/blog/${id}`)
     }
+    const deleteArticle  = (id) => {
+        return request(`${BASE_URL}/blog`,"DELETE",id)
+    }
 
     return { error, loading, succes, getCompany,postComand,getArticles,getArticle  }
 }
